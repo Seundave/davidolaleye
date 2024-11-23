@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .container {
+    @apply max-w-[1240px] mx-auto flex flex-col;
+  }
+
+  .flex-container {
+    @apply max-w-[1240px] mx-auto sm:flex sm:flex-row flex flex-col;
+  }
+
+  .section-header-text {
+    @apply lg:text-[25px] md:text-[16px] text-[25px] font-semibold;
+  }
+
+  .card-container {
+    @apply px-[1.5em] lg:px-[4em] py-[3.2em] bg-white flex flex-col;
+  }
+
+  .paragraph {
+    @apply md:text-[14px] text-[14px];
+  }
+
+  .common-padding {
+    @apply sm:py-32 py-20 sm:px-10 px-5;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* For WebKit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 0; /* Removes the scrollbar */
+  background: transparent; /* Ensures the scrollbar area is transparent */
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: none; /* Hides the scrollbar */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
+
+.Toastify__toast-body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
