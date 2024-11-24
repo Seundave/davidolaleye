@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Button from "../../reusables/Button";
-import { Link } from "react-router-dom";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { picture } from "../../assets";
 
@@ -30,44 +29,46 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="sm:flex sm:flex-row gap-4 md:gap-0 flex flex-col justify-between">
-      <div className="sm:w-[50%] w-full flex flex-col justify-center gap-4">
+    <div className="flex flex-col-reverse md:flex-row items-center justify-between px-4 md:px-0 lg:px-0 py-10 gap-6 md:gap-12">
+      {/* Left Section */}
+      <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-6">
         <h2
           style={{
             transform: isSliding ? "translateX(0)" : "translateX(-100%)",
             opacity: isSliding ? 1 : 0,
             transition: "transform 0.5s ease, opacity 0.5s ease",
           }}
-          className="lg:text-[30px] md:text-[20px] text-[30px] md:font-bold font-bold text-[#112F5A]"
+          className="text-[24px] md:text-[30px] lg:text-[36px] font-bold text-[#112F5A]"
         >
           {headerTexts[currentTextIndex]}
         </h2>
-        <p className="paragraph mt-[10px] text-[#474F50] text-justify">
+        <p className="text-[14px] md:text-[16px] text-[#474F50] leading-relaxed">
           I'm David. I'm a passionate frontend developer specializing in
           crafting visually stunning and highly functional websites. With
           expertise in modern frameworks and a strong focus on responsive
           design, I help bring ideas to life, one pixel at a time. Let's build a
           digital experience that leaves a lasting impression.
         </p>
-        <div className="w-full mt-[24px] flex gap-4 md:w-fit mb-3 md:mb-0">
-          <Link to={"/academy"}>
+        <div className="w-full flex flex-wrap gap-4 mt-4">
+          <a href={"#projects"}>
             <Button text={"View Projects"} width={"full"} bgColor={"#003F88"} />
-          </Link>
-
+          </a>
           <a
             href="/Olaleye David CV.pdf"
             download="Olaleye David CV.pdf"
-            className="text-red-600 border border-red-600 rounded-full px-6 text-[14px] flex items-center justify-center gap-2"
+            className="text-red-600 border border-red-600 rounded-full px-6 py-2 text-[14px] flex items-center justify-center gap-2"
           >
             Download Resume <MdKeyboardArrowDown size={16} />
           </a>
         </div>
       </div>
-      <div className="sm:w-[40%] w-full rounded-full">
+
+      {/* Right Section */}
+      <div className="w-full md:w-1/2 flex justify-center">
         <img
           src={picture}
-          alt="about"
-          className="rounded-full h-[400px] w-[400px]"
+          alt="David's Profile"
+          className="rounded-full max-w-[250px] md:max-w-[350px] lg:max-w-[400px] h-auto"
         />
       </div>
     </div>

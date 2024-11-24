@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import {
+  carShow,
   gomal,
   gomal2,
   helpdesk,
+  kitchen,
+  lms,
   nopolus,
   smarta,
+  surepay,
   teesbridal,
   transformative,
 } from "../../assets";
@@ -15,53 +19,41 @@ import Button from "../../reusables/Button";
 const projectCard = [
   {
     id: 1,
-    image: gomal,
-    title: "Gomal Baptist College (Portal)",
+    image: lms,
+    title: "Learning Management System",
     about:
-      "A unified platform for managing school operations, connecting staff and students, and streamlining academic and administrative tasks.",
-    skills: [
-      "Tailwind css",
-      "ReactJS",
-      "Material UI",
-      "API Integration",
-      "Toastify",
-      "Redux",
-    ],
-    link: "https://portal.gomalbapcollege.com",
+      "The platform was built to streamline learning, featuring course management, progress tracking, and an intuitive user experience for educators and students.",
+    skills: ["Tailwind css", "ReactJS", "Redux", "Shadcn"],
+    link: "https://learningmanagementwebapp.netlify.app/",
   },
   {
     id: 2,
-    image: gomal2,
-    title: "Gomal Baptist College (Website)",
+    image: surepay,
+    title: "Surepay Africa (Replica)",
     about:
-      "A website for school news, events, and resources, with easy access to updates, announcements, and helpful links for students, parents, and staff.",
-    skills: [
-      "Tailwind css",
-      "ReactJS",
-      "Material UI",
-      "API Integration",
-      "Toastify",
-      "Redux",
-    ],
-    link: "https://www.gomalbapcollege.com/",
+      "The platform was developed to ensure secure online transactions, protecting buyers and sellers while promoting trust and safety in e-commerce across Africa. ",
+    skills: ["Tailwind css", "NextJS", "React-hook-form", "Shadcn"],
+    link: "https://surepay-africa.netlify.app/",
   },
   {
-    id: 3,
-    image: smarta,
-    title: "Smarta Teens Consulting",
+    id: 2,
+    image: carShow,
+    title: "Car Showcase (Website)",
     about:
-      "Smarta Teens Consulting helps teens succeed through personalized coaching, career advice, and mentorship.",
-    skills: [
-      "Tailwind css",
-      "ReactJS",
-      "Material UI",
-      "API Integration",
-      "Toastify",
-      "Redux",
-    ],
-    link: "https://smartateensconsulting.com/",
+      "The website was built to showcase stunning car collections, featuring detailed specifications, high-quality visuals, and a seamless browsing experience for enthusiasts.",
+    skills: ["Tailwind css", "NextJS"],
+    link: "https://carshowcaseweb.netlify.app/",
   },
-  
+
+  {
+    id: 3,
+    image: kitchen,
+    title: "A Restaurant Website",
+    about:
+      "The website was created to showcase the restaurant’s menu, highlight its ambiance, and provide a seamless reservation experience for customers.",
+    skills: ["Tailwind css", "ReactJS"],
+    link: "https://seundavegericht.netlify.app/",
+  },
 ];
 
 const PersonalProjects = () => {
@@ -96,7 +88,7 @@ const PersonalProjects = () => {
                   </button>
                 ))}
               </div>
-              <Link to={el.link}>
+              <a href={el.link} target="_blank" rel="noopener noreferrer">
                 <div className="flex gap-2 items-center mt-5">
                   <p className="paragraph text-red-500">View Project</p>
                   <MdOutlineKeyboardArrowRight
@@ -104,7 +96,7 @@ const PersonalProjects = () => {
                     style={{ color: "red" }}
                   />
                 </div>
-              </Link>
+              </a>
             </div>
           </div>
         ))}

@@ -110,14 +110,14 @@ const projectCard = [
     ],
     link: "https://nopolus.com/",
   },
-  {
-    id: 7,
-    image: gomal,
-    title: "Additional Project",
-    about: "Additional project info",
-    skills: ["test", "test", "test"],
-    link: "/",
-  },
+  // {
+  //   id: 7,
+  //   image: gomal,
+  //   title: "Additional Project",
+  //   about: "Additional project info",
+  //   skills: ["test", "test", "test"],
+  //   link: "/",
+  // },
 ];
 
 const ProjectList = () => {
@@ -152,7 +152,7 @@ const ProjectList = () => {
                   </button>
                 ))}
               </div>
-              <Link to={el.link}>
+              <a href={el.link} target="_blank" rel="noopener noreferrer">
                 <div className="flex gap-2 items-center mt-5">
                   <p className="paragraph text-red-500">View Project</p>
                   <MdOutlineKeyboardArrowRight
@@ -160,7 +160,7 @@ const ProjectList = () => {
                     style={{ color: "red" }}
                   />
                 </div>
-              </Link>
+              </a>
             </div>
           </div>
         ))}

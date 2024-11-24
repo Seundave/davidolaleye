@@ -1,5 +1,4 @@
 export { default as logo } from "./logo.png";
-export { default as anotherLogo } from "./anotherLogo.png";
 export { default as gomal } from "./gomal.png";
 export { default as gomal2 } from "./gomal2.png";
 export { default as smarta } from "./smarta.png";
@@ -10,3 +9,7 @@ export { default as helpdesk } from "./helpdesk.png";
 export { default as picture } from "./professional picture.jpg";
 export { default as arrowLeft } from "./left-chevron.png";
 export { default as arrowRight } from "./right-arrow-angle.png";
+export { default as carShow } from "./carshow.png";
+export { default as lms } from "./lms.png";
+export { default as kitchen } from "./kitchen.png";
+export { default as surepay } from "./surepay.png";
